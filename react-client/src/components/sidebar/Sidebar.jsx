@@ -68,7 +68,9 @@ export default function Sidebar() {
           </li>
         <ul className="sidebarFriendList">
           {currentFriends.map((u) => (
+            <Link to={`/profile/${u.username}`} style={{color: 'inherit', textDecoration: 'inherit'}}>
             <CloseFriend key={u._id} user={u} />
+            </Link>
           ))}
         </ul>
         <hr className="sidebarHr" />
